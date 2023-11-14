@@ -14,7 +14,6 @@ namespace XFitness.Api.Controllers
             _context = context;
         }
 
-        // GET Exercise by Id
         [HttpGet("{id}")]
         public async Task<ActionResult> GetExerciseById(int id)
         {
@@ -27,22 +26,19 @@ namespace XFitness.Api.Controllers
             return Ok(exercise);
         }
 
-        // POST api/<ExerciseController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        //[HttpPost]
+        //public async Task<ActionResult<ExerciseDto>> PostExerciseAsync([FromBody] ExercisePayload exercisePayload)
+        //{
+        //}
 
-        // PUT api/<ExerciseController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        //[HttpPut("{id}")]
+        //public async Task<ActionResult<ExerciseDto>> UpdateExercise(int id, [FromBody] ExercisePayload exercisePayload)
+        //{
+        //}
 
-        // DELETE api/<ExerciseController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        //[HttpDelete("{id}")]
+        //public async Task<ActionResult> DeleteExercise(int id)
+        //{
+        //}
     }
 }
