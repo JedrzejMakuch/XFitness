@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using XFitness.Data.Data;
 
 namespace XFitness.Api.Controllers
 {
@@ -6,18 +8,23 @@ namespace XFitness.Api.Controllers
     [ApiController]
     public class ExerciseController : ControllerBase
     {
-        // GET: api/<ExerciseController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly XFitnessDbContext _context;
+        public ExerciseController(XFitnessDbContext context)
         {
-            return new string[] { "value1", "value2" };
+            _context = context;
         }
 
-        // GET api/<ExerciseController>/5
+        // GET Exercise by Id
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<ActionResult> GetExerciseById(int id)
         {
-            return "value";
+            var exercise = await _context.Exercises.FirstOrDefaultAsync(exercise => exercise.ExerciseId == id);
+            if(exercise == null)
+            {
+                return NotFound($"There is not exercise with Id = {id}");
+            }
+
+            return Ok(exercise);
         }
 
         // POST api/<ExerciseController>
