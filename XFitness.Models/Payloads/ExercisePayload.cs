@@ -6,6 +6,5 @@
         public string ExerciseDescription { get; set; }
         public string ImageUrl { get; set; }
         public string Category { get; set; }
-        public DateTime ExerciseCreatedDate { get; set; }
     }
 }

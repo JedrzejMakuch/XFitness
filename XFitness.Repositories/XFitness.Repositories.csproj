@@ -10,4 +10,9 @@
     <Folder Include="Repositories\Contracts\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\XFitness.Data\XFitness.Data.csproj" />
+    <ProjectReference Include="..\XFitness.Models\XFitness.Models.csproj" />
+  </ItemGroup>
+
 </Project>
