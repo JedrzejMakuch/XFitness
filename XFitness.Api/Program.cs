@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using XFitness.Api.Services.Services;
+using XFitness.Api.Services.Services.Contracts;
 using XFitness.Data.Data;
+using XFitness.Repositories.Repositories;
+using XFitness.Repositories.Repositories.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +16,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<XFitnessDbContext>(options =>
 options.UseSqlServer(builder.Configuration
-        .GetConnectionString("XFitnessDbContext"), b => b.MigrationsAssembly("XFitness.Data")));
+        .GetConnectionString("XFitnessDbContext"), b => b.MigrationsAssembly("XFitness.Data")), ServiceLifetime.Transient);
+
+builder.Services.AddScoped<IExerciseService, ExerciseService>();
+builder.Services.AddScoped<IExerciseRepository, ExerciseRepository>();
 
 var app = builder.Build();
 

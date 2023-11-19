@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\XFitness.Models\XFitness.Models.csproj" />
+    <ProjectReference Include="..\XFitness.Repositories\XFitness.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>
