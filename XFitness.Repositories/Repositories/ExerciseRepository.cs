@@ -3,16 +3,16 @@ using XFitness.Data.Data;
 using XFitness.Models.Entities;
 using XFitness.Models.Payloads;
 using XFitness.Repositories.Repositories.Contracts;
-using XFitness.Shared.Services.Contracts;
 using static XFitness.Shared.Constants.Consts;
+using XFitness.Shared.Services.Contracts;
 
 namespace XFitness.Repositories.Repositories
 {
     public class ExerciseRepository : IExerciseRepository
     {
         private readonly XFitnessDbContext _context;
-        private readonly ILogger _logger;
-        public ExerciseRepository(XFitnessDbContext context, ILogger logger)
+        private readonly ILoggerToFile _logger;
+        public ExerciseRepository(XFitnessDbContext context, ILoggerToFile logger)
         {
              _context = context;
             _logger = logger;

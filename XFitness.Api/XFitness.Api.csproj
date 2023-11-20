@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\XFitness.Api.Services\XFitness.Api.Services.csproj" />
     <ProjectReference Include="..\XFitness.Data\XFitness.Data.csproj" />
+    <ProjectReference Include="..\XFitness.Shared\XFitness.Shared.csproj" />
   </ItemGroup>
 
 </Project>

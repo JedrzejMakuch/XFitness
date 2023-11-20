@@ -1,8 +1,8 @@
-﻿using XFitness.Shared.Services.Contracts;
+﻿using XFitness.Shared.Services.Contacts;
 
-namespace XFitness.Shared.Service;
+namespace XFitness.Shared.Services;
 
-public class Logger : ILogger
+public class LoggerToFile : ILoggerToFile
 {
     public void LogToFile(string message, string filePath) 
     {
