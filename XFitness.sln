@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFitness.Api", "XFitness.Api\XFitness.Api.csproj", "{C6C68E32-445F-43E6-811A-8C08E63C035E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XFitness.Api", "XFitness.Api\XFitness.Api.csproj", "{C6C68E32-445F-43E6-811A-8C08E63C035E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFitness.Data", "XFitness.Data\XFitness.Data.csproj", "{A25A76AC-FAD1-4649-ABDF-4BFC731608F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XFitness.Data", "XFitness.Data\XFitness.Data.csproj", "{A25A76AC-FAD1-4649-ABDF-4BFC731608F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFitness.Models", "XFitness.Models\XFitness.Models.csproj", "{9BE88395-6DCF-4BBB-A923-83008D0A4C2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XFitness.Models", "XFitness.Models\XFitness.Models.csproj", "{9BE88395-6DCF-4BBB-A923-83008D0A4C2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFitness.Api.Services", "XFitness.Api.Services\XFitness.Api.Services.csproj", "{A3698843-D702-4450-B5E8-FAE97E574AD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XFitness.Api.Services", "XFitness.Api.Services\XFitness.Api.Services.csproj", "{A3698843-D702-4450-B5E8-FAE97E574AD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFitness.Repositories", "XFitness.Repositories\XFitness.Repositories.csproj", "{D4757AEF-7FB1-46C8-BB78-3F35D8250018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XFitness.Repositories", "XFitness.Repositories\XFitness.Repositories.csproj", "{D4757AEF-7FB1-46C8-BB78-3F35D8250018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFitness.Shared", "XFitness.Shared\XFitness.Shared.csproj", "{68240A69-6E1B-4466-AB81-8DEB17BA5A83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{D4757AEF-7FB1-46C8-BB78-3F35D8250018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4757AEF-7FB1-46C8-BB78-3F35D8250018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4757AEF-7FB1-46C8-BB78-3F35D8250018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68240A69-6E1B-4466-AB81-8DEB17BA5A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68240A69-6E1B-4466-AB81-8DEB17BA5A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68240A69-6E1B-4466-AB81-8DEB17BA5A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68240A69-6E1B-4466-AB81-8DEB17BA5A83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

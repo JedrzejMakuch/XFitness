@@ -3,15 +3,19 @@ using XFitness.Data.Data;
 using XFitness.Models.Entities;
 using XFitness.Models.Payloads;
 using XFitness.Repositories.Repositories.Contracts;
+using XFitness.Shared.Services.Contracts;
+using static XFitness.Shared.Constants.Consts;
 
 namespace XFitness.Repositories.Repositories
 {
     public class ExerciseRepository : IExerciseRepository
     {
         private readonly XFitnessDbContext _context;
-        public ExerciseRepository(XFitnessDbContext context)
+        private readonly ILogger _logger;
+        public ExerciseRepository(XFitnessDbContext context, ILogger logger)
         {
              _context = context;
+            _logger = logger;
         }
 
         public async Task<ExerciseModel> GetExerciseByIdAsync(int id)
@@ -21,8 +25,9 @@ namespace XFitness.Repositories.Repositories
                 var exercise = await _context.Exercises.FirstOrDefaultAsync(e => e.ExerciseId == id);
                 return exercise;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogToFile(ex.ToString(), FilePaths.ExercisePath);
                 throw;
             }
         }
@@ -45,8 +50,9 @@ namespace XFitness.Repositories.Repositories
 
                 return exerciseModel;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogToFile(ex.ToString(), FilePaths.ExercisePath);
                 throw;
             }
         }
@@ -65,9 +71,9 @@ namespace XFitness.Repositories.Repositories
                 await _context.SaveChangesAsync();
                 return exerciseModel;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                _logger.LogToFile(ex.ToString(), FilePaths.ExercisePath);
                 throw;
             }
         }
@@ -80,9 +86,9 @@ namespace XFitness.Repositories.Repositories
                 _context.Exercises.Remove(exerciseModel);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                _logger.LogToFile(ex.ToString(), FilePaths.ExercisePath);
                 throw;
             }
         }
