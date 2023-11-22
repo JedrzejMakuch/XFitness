@@ -1,15 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace XFitness.Models.Entities
+﻿namespace XFitness.Models.Dtos
 {
-    public class ProgramExerciseProgressModel
+    public class ProgramExerciseProgressDto
     {
-        [Key]
         public int ProgramExerciseProgressId { get; set; }
         public int ExerciseId { get; set; }
-        public DateTime ExerciseProgramDate { get; set; }
         public int Sets { get; set; }
         public int Repetitions { get; set; }
         public int Weight { get; set; }
+        public DateTime ExerciseProgramDate { get; set; }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using XFitness.Api.Services.Services.Contracts;
+using XFitness.Models.Dtos;
 
 namespace XFitness.Api.Controllers
 {
@@ -6,36 +8,42 @@ namespace XFitness.Api.Controllers
     [ApiController]
     public class ProgramExerciseProgressController : ControllerBase
     {
-        // GET: api/<ProgramExerciseProgressController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly IProgramExerciseProgressService _programExerciseProgressService;
+        public ProgramExerciseProgressController(IProgramExerciseProgressService programExerciseProgressService)
         {
-            return new string[] { "value1", "value2" };
+            _programExerciseProgressService = programExerciseProgressService;
         }
+
+        //[HttpGet]
+        //public async Task<IEnumerable<ProgramExerciseProgressDto>> GetProgramExerciseProgressList()
+        //{
+        //    var programExerciseProgressList = await _programExerciseProgressService.GetProgramExerciseProgressList();
+            
+        //}
 
         // GET api/<ProgramExerciseProgressController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //[HttpGet("{id}")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
-        // POST api/<ProgramExerciseProgressController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        //// POST api/<ProgramExerciseProgressController>
+        //[HttpPost]
+        //public void Post([FromBody] string value)
+        //{
+        //}
 
-        // PUT api/<ProgramExerciseProgressController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
+        //// PUT api/<ProgramExerciseProgressController>/5
+        //[HttpPut("{id}")]
+        //public void Put(int id, [FromBody] string value)
+        //{
+        //}
 
-        // DELETE api/<ProgramExerciseProgressController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        //// DELETE api/<ProgramExerciseProgressController>/5
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //}
     }
 }

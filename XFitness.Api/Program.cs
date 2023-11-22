@@ -5,6 +5,7 @@ using XFitness.Data.Data;
 using XFitness.Repositories.Repositories;
 using XFitness.Repositories.Repositories.Contracts;
 using XFitness.Shared.Services;
+using XFitness.Shared.Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +22,7 @@ options.UseSqlServer(builder.Configuration
 
 builder.Services.AddScoped<IExerciseService, ExerciseService>();
 builder.Services.AddScoped<IExerciseRepository, ExerciseRepository>();
-builder.Services.AddScoped<ILogger, Logger>();
+builder.Services.AddScoped<ILoggerToFile, LoggerToFile>();
 
 var app = builder.Build();
 

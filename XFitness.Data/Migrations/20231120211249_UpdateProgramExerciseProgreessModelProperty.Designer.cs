@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using XFitness.Data.Data;
 
@@ -11,9 +12,10 @@ using XFitness.Data.Data;
 namespace XFitness.Data.Migrations
 {
     [DbContext(typeof(XFitnessDbContext))]
-    partial class XFitnessDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231120211249_UpdateProgramExerciseProgreessModelProperty")]
+    partial class UpdateProgramExerciseProgreessModelProperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

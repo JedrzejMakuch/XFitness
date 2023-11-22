@@ -1,4 +1,4 @@
-﻿using XFitness.Shared.Services.Contacts;
+﻿using XFitness.Shared.Services.Contracts;
 
 namespace XFitness.Shared.Services;
 
